@@ -1,0 +1,11 @@
+sql-practice/
+│
+├── README.md
+├── basics/
+│   └── select_where.sql
+├── joins/
+│   └── all_joins.sql
+├── subqueries/
+│   └── subquery_examples.sql
+└── functions/
+    └── aggregate_functions.sql
