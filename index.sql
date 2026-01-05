@@ -52,3 +52,28 @@ FROM city
 INNER JOIN country
 ON city.countrycode = country.code
 WHERE country.continent = 'Asia';
+Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Input Format
+
+The CITY and COUNTRY tables are described as follows:
+select city.name
+from city
+inner join 
+country on city.countrycode = country.code where continent = 'Africa';
+3.Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Input Format
+
+The CITY and COUNTRY tables are described as follows:
+SELECT 
+    country.continent,
+    FLOOR(AVG(city.population)) AS avg_population
+FROM city
+INNER JOIN country
+ON city.countrycode = country.code
+GROUP BY country.continent;
